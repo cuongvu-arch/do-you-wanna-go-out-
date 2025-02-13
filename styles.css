@@ -8,8 +8,10 @@ body {
     background-color: #fff5f5;
     font-family: 'Indie Flower', cursive;
     overflow: hidden;
+    background-image: url(vltriel.jpg);
+    background-size: 400px auto; /* Or a specific size like 500px auto */
+    background-position: center; /* Adjust 100px as needed */
 }
-
 .container {
     text-align: center;
     background-color: #ffebee;
@@ -21,7 +23,6 @@ body {
     width: 90%;
     position: relative; /* To ensure the No button moves within this container */
 }
-
 .header_text {
     font-size: 36px;
     color: #ff6b81;
@@ -34,6 +35,7 @@ body {
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
+    background-color: #ff6b81;
 }
 
 .buttons {
@@ -58,6 +60,31 @@ body {
 }
 
 .btn:hover {
+    background-color: white;
+    color: #ff6b81;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
+}
+.audio-player {
+    margin-top: 20px; /* Add space above the audio player */
+    text-align: center; /* Center the button and audio */
+    position: fixed; /* Or relative, as needed */
+    top: 50px;
+    right: 50px;
+}
+.play-audio-btn { /* Styles for the button itself */
+    background-color: #ff6b81;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0;
+    display: inline-block;
+}
+
+.play-audio-btn:hover { /* Hover effect for the BUTTON */
     background-color: white;
     color: #ff6b81;
     transform: translateY(-2px);
