@@ -226,6 +226,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-image: url(toom.jpg);
+            background-size: cover;
+            background-position: bottom 170px ;
         }
 
         .reset {
@@ -285,13 +288,19 @@
         <button id="open">Open Envelope</button>
         <button id="reset">Close Envelope</button>
     </div>
+    
+    <audio id="openSound">
+        <audio id="openSound" loop></audio> <source src="acquy.mp3" type="audio/mpeg">
+    </audio>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
             const envelope = $('#envelope');
             const btnOpen = $("#open");
             const btnReset = $("#reset");
+            const openSound = $('#openSound')[0]; // Get the audio element
 
             envelope.on('click', open);
             btnOpen.on('click', open);
@@ -299,10 +308,13 @@
 
             function open() {
                 envelope.removeClass("close").addClass("open");
+                openSound.play(); // Play the sound
             }
 
             function close() {
                 envelope.removeClass("open").addClass("close");
+                openSound.pause(); // Stop the sound (optional)
+                openSound.currentTime = 0; // Reset sound to beginning (optional)
             }
         });
     </script>

@@ -47,9 +47,35 @@ body {
     display: inline-block;
     position:fixed;
     bottom: 100px;
-    right: 690px;
+    right: 680px;
+    size: 500px;
 }
 .btn-chuyen-trang:hover { /* Hover effect for the BUTTON */
+    background-color: white;
+    color: #ff6b81;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
+}
+.audio-player {
+    margin-top: 20px; /* Add space above the audio player */
+    text-align: center; /* Center the button and audio */
+    position: fixed; /* Or relative, as needed */
+    top: 100px;
+    right: 680px;
+}
+.play-audio-btn { /* Styles for the button itself */
+    background-color: #ff6b81;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0;
+    display: inline-block;
+}
+
+.play-audio-btn:hover { /* Hover effect for the BUTTON */
     background-color: white;
     color: #ff6b81;
     transform: translateY(-2px);
